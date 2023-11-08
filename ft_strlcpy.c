@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 19:08:30 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/08 13:22:07 by jlebard          ###   ########.fr       */
+/*   Created: 2023/11/08 13:38:25 by jlebard           #+#    #+#             */
+/*   Updated: 2023/11/08 13:48:58 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-int	ft_isprint(int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (c >= 32 && c <= 127)
-		return (1);
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (i < size)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	return (size);
 }
 
-// int main ()
+// int main()
 // {
-//     char c = 6;
-//     printf("test %d", ft_isprint(c));
-//     return 0;
+// 	char		*dst;
+// 	char	const	*src = "huwdiwh";
+// 	size_t size = 3;
+// 	printf("%ld, %s", ft_strlcpy(dst, src, size), dst);
+// 	return 0;	
 // }

@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 19:08:30 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/08 13:22:07 by jlebard          ###   ########.fr       */
+/*   Created: 2023/11/08 12:30:45 by jlebard           #+#    #+#             */
+/*   Updated: 2023/11/08 12:37:51 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-int	ft_isprint(int c)
+int	ft_strlen(char *str)
 {
-	if (c >= 32 && c <= 127)
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
 
-// int main ()
+// int main()
 // {
-//     char c = 6;
-//     printf("test %d", ft_isprint(c));
-//     return 0;
+// 	char *c = "";
+// 	printf("%d", ft_strlen(c));
+// 	return 0;
 // }
