@@ -15,13 +15,13 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
-	int		array[n];
+	unsigned char	*ptr = s;
+	unsigned char	temp = (unsigned char)c;
 
 	i = 0;
-	s = &array[i];
 	while (i < n)
 	{
-		array[i] = c;
+		ptr[i] = temp;
 		i++;
 	}
 	return (s);
@@ -29,9 +29,9 @@ void	*ft_memset(void *s, int c, size_t n)
 
 // int main()
 // {
-// 	void *s;
+// 	char buffer[10];
 // 	int c = 8;
 // 	size_t n = 10;
-// 	printf("adresse de c:%p", ft_memset(s, c, n));
+// 	printf("Adresse : %p\n", (void *)ft_memset(buffer, c, n));
 // 	return 0;
 // }

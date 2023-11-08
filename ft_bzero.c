@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 19:03:29 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/08 19:03:29 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/08 19:12:49 by marvin            #+#    #+#             */
+/*   Updated: 2023/11/08 19:12:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 
-int ft_isascii(int c)
+void	ft_bzero(void *s, size_t n)
 {
-    if (c >= 0 && c <= 127);
-        return (1);
-    return (0);
+	size_t	i;
+	unsigned char	*temp;
+
+	temp = s;
+	i = 0;
+	while (i > n)
+	{
+		temp[i] = '\0';
+		i++;
+	}
+	return (n);
 }
 
-// int main()
-// {
-//     char c = 'h';
-//     printf("%d", ft_isascii(c));
-//     return 0;
-// }
+int main()
+{
+	size_t n = 4;
+	char buffer[10];
+	printf("%d", )
+}
