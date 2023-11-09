@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   memcpy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 19:12:49 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/08 19:12:49 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/09 17:04:15 by marvin            #+#    #+#             */
+/*   Updated: 2023/11/09 17:04:15 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-void	*ft_bzero(void *s, size_t n)
+void	*ft_memcpy(void *dest, const void   *src, size_t    n)
 {
-	size_t	i;
-	unsigned char	*temp;
-
-	temp = (unsigned char *)s;
+	unsigned char   *s;
+	unsigned char   *d;
+	size_t  i;
+	
+	d = (unsigned char*)dest;
+	s = (unsigned char*)src;
 	i = 0;
-	while (i > n)
+	while (i < n && dest != src)
 	{
-		temp[i] = '\0';
+		d[i] = s[i];
 		i++;
 	}
-	return (s);
+	return (dest);
 }
 
 // int main()
 // {
-// 	size_t n = 4;
-// 	char buffer[10];
-// 	printf("%d", ft_bzero(buffer, n));
+// 	unsigned char	*src[12];
+// 	unsigned char	*dest[10];
+// 	size_t	n = 8;
+// 	printf("%p", ft_memcpy(dest, src, n));
 // }

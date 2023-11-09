@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 19:12:49 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/08 19:12:49 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/09 17:42:00 by marvin            #+#    #+#             */
+/*   Updated: 2023/11/09 17:42:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-void	*ft_bzero(void *s, size_t n)
+char	*ft_strlcat(char    *dest, const char	*src, size_t	n)
 {
-	size_t	i;
-	unsigned char	*temp;
+	int	i;
+	int	j;
 
-	temp = (unsigned char *)s;
 	i = 0;
-	while (i > n)
-	{
-		temp[i] = '\0';
+	j = 0;
+	while (dest[i] != '\0')
 		i++;
+	while (src[j] != '\0' && j < (int)n)
+	{
+		dest[i + j] = src[j];
+		j++;
 	}
-	return (s);
+	dest[i + j] = '\0';
+	return (dest);
 }
 
 // int main()
 // {
-// 	size_t n = 4;
-// 	char buffer[10];
-// 	printf("%d", ft_bzero(buffer, n));
+// 	char *src = "hudzo";
+// 	char dest[] = "ndiozcs";
+// 	size_t	n = 0;
+// 	printf("%s\n", ft_strlcat(dest, src, n));
+// 	return 0;
 // }
