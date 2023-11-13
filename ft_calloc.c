@@ -12,12 +12,23 @@
 
 // #include <stdio.h>
 // #include <stdlib.h>
+// #include <stddef.h>
 
 void	*ft_calloc(size_t n, size_t size)
 {
 	unsigned char	*str;
+	int	i;
 
+	i = 0;
 	str = malloc(n * size);
+	if (str != NULL)
+	{
+		while (i < n)
+		{
+			str[i] = '\0';
+			i++;
+		}
+	}
 	return (str);
 }
 
