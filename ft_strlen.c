@@ -6,13 +6,13 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:30:45 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/08 12:37:51 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/14 10:47:23 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

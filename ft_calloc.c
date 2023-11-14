@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:27:07 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/13 14:39:15 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/14 09:36:35 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 void	*ft_calloc(size_t n, size_t size)
 {
 	unsigned char	*str;
-	int	i;
+	int				i;
 
 	i = 0;
 	str = malloc(n * size);
