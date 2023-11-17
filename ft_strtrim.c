@@ -6,22 +6,11 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 09:41:20 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/14 11:20:16 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/17 11:30:36 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stdlib.h>
-
-size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 int	ft_char_in_set(char c, char const *set)
 {

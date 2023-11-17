@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:37:47 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/15 15:37:47 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/17 11:21:03 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <stddef.h>
+#include "libft.h"
 
 void	ft_free_memory(char **dest)
 {
@@ -21,7 +19,7 @@ void	ft_free_memory(char **dest)
 	i = 0;
 	while (dest[i] != 0)
 	{
-			free(dest[i]);
+		free(dest[i]);
 		i++;
 	}
 	free (dest);
@@ -76,23 +74,25 @@ int	ft_write_split(char **dest, char const *s, char c)
 		{
 			while (s[i + j] != c && s[i + j] != '\0')
 				j++;
-		if (!(dest[word] = (char *)malloc(sizeof(char) * (j + 1))))
-			return (-1);
-		ft_write_word(s + i, dest[word], c);
-		i += j;
-		word++;		
+			dest[word] = (char *)malloc(sizeof(char) * (j + 1));
+			if (!dest[word])
+				return (-1);
+			ft_write_word(s + i, dest[word], c);
+			i += j;
+			word++;
 		}
 	}
-	return(0);
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		words;
 	char	**dest;
-	
+
 	words = ft_count_words(s, c);
-	if (!(dest = (char **)malloc(sizeof(char *) * (words + 1))))
+	dest = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!dest)
 		return (NULL);
 	dest[words] = 0;
 	if (ft_write_split(dest, s, c) == -1)

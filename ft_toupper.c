@@ -6,11 +6,11 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:46:11 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/13 11:01:03 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/17 11:23:05 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

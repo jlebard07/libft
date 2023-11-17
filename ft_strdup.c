@@ -6,13 +6,11 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:39:44 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/13 14:47:46 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/17 11:21:15 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
