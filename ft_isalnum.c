@@ -19,8 +19,10 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
-// void main()
+// int main()
 // {
 // 	char c = '#';
-// 	printf("test %d", ft_isalnum(c));
+// 	printf("%d\n", ft_isalnum(c));
+//	printf("vrai isalnum : %d\n", isalnum(c));
+//	return 0;
 // }

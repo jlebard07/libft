@@ -34,6 +34,7 @@ void	*ft_memset(void *s, int c, size_t n)
 // 	char buffer[10];
 // 	int c = 8;
 // 	size_t n = 10;
-// 	printf("Adresse : %p\n", (void *)ft_memset(buffer, c, n));
+// 	printf("%p\n", (void *)ft_memset(buffer, c, n));
+//	printf("vrai memset : %p\n", memset(buffer, c, n));
 // 	return 0;
 // }

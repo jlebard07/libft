@@ -22,6 +22,7 @@ int	ft_isprint(int c)
 // int main ()
 // {
 //     char c = 6;
-//     printf("test %d", ft_isprint(c));
+//     printf("%d\n", ft_isprint(c));
+//	   printf("vrai isprint : %d\n", isprint(c));
 //     return 0;
 // }

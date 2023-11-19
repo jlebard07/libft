@@ -30,10 +30,11 @@ void	*ft_calloc(size_t n, size_t size)
 	return (str);
 }
 
-// void main()
+// int main()
 // {
 // 	size_t n = 6; 
 // 	size_t size = 1;
 // 	printf("%p\n", ft_calloc(n, size));
-// 	printf("%p", calloc(n, size));
+// 	printf("vrai calloc : %p\n", calloc(n, size));
+//	return 0;
 // }

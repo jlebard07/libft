@@ -31,5 +31,7 @@ void	ft_bzero(void *s, size_t n)
 // {
 // 	size_t n = 4;
 // 	char buffer[10];
-// 	printf("%d", ft_bzero(buffer, n));
+// 	printf("%d\n", ft_bzero(buffer, n));
+//  printf("vrai bzero : %d\n", bzero(buffer, n)");
+//	return 0;
 // }

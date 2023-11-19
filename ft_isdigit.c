@@ -19,8 +19,10 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-// void main()
+// int main()
 // {
 // 	char c = 'j';
-// 	printf("test %d", ft_isdigit(c));
+// 	printf("%d\n", ft_isdigit(c));
+//	printf("vrai isdigit : %d\n", isdigit(c));
+//	return 0;
 // }

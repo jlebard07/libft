@@ -22,6 +22,7 @@ int	ft_isascii(int c)
 // int main()
 // {
 //     char c = 'h';
-//     printf("%d", ft_isascii(c));
+//     printf("%d\n", ft_isascii(c));
+//	   printf("vrai isascii : %d\n", isascii(c));
 //     return 0;
 // }

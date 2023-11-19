@@ -24,7 +24,8 @@ size_t	ft_strlen(const char *str)
 
 // int main()
 // {
-// 	char *c = "";
+// 	char *c = "   ";
 // 	printf("%d", ft_strlen(c));
+//	printf("vrai strlen : %d", strlen(c));
 // 	return 0;
 // }

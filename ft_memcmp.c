@@ -25,10 +25,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-// void main()
+// int main()
 // {
 // 	char *s1 = "wuhdhwu";
 // 	char *s2 = "wuhdhw0";
 // 	size_t n = 100;
-// 	printf("%d", ft_memcmp(s1, s2, n));
+// 	printf("%d\n", ft_memcmp(s1, s2, n));;
+//	printf("vrai memcmp : %d\n", memcmp(s1, s2, n));
+//	return 0;
 // }

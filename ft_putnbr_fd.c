@@ -30,9 +30,11 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(fd, n + 48);
 }
 
-// void main()
+// int main()
 // {
 // 	int fd = 1;
 // 	int n = -2147483648;
 // 	ft_putnbr_fd(n, fd);
+//	write (fd, '\n', 1);
+//	return 0;
 // }

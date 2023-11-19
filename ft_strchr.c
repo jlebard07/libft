@@ -20,9 +20,11 @@ char	*ft_strchr(const char	*s, int c)
 	return (NULL);
 }
 
-// void main()
+// int main()
 // {
 // 	char *s = "bdwuidgbw";
 // 	char c = 'u';
-// 	printf("%p", ft_strchr(s, c));
+// 	printf("%p\n", ft_strchr(s, c));
+//	printf("vrai strchr : %p\n", strchr(s, c));
+//	return 0;
 // }

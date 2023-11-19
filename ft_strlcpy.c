@@ -30,6 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // 	char		*dst;
 // 	char	const	*src = "huwdiwh";
 // 	size_t size = 3;
-// 	printf("%ld, %s", ft_strlcpy(dst, src, size), dst);
+// 	printf("%ld + dst = %s\n", ft_strlcpy(dst, src, size), dst);
+//	printf("vrai strlcpy : %ld + dst = %s\n", strlcpy(dst, src, size), dst);
 // 	return 0;	
 // }

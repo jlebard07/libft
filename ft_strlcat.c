@@ -36,5 +36,6 @@ size_t	ft_strlcat(char *dest, const char	*src, size_t	n)
 // 	char dest[] = "ndiozcs";
 // 	size_t	n = 0;
 // 	printf("%s\n", ft_strlcat(dest, src, n));
+//	printf("vrai strlcat : %s\n", strlcat(dest, src, n));
 // 	return 0;
 // }

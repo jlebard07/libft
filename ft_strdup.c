@@ -30,10 +30,10 @@ char	*ft_strdup(const char *s)
 	return (dest);
 }
 
-// void main()
+// int main()
 // {
 // 	char *str = "alldwndidhwug";
 // 	printf("%s\n", ft_strdup(str));
-// 		printf("%s", strdup(str));
-
+// 	printf("vrai strdup : %s\n", strdup(str));
+//	return 0;
 // }

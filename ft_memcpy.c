@@ -34,5 +34,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // 	unsigned char	*src[12];
 // 	unsigned char	*dest[10];
 // 	size_t	n = 8;
-// 	printf("%p", ft_memcpy(dest, src, n));
+// 	printf("%p\n", ft_memcpy(dest, src, n));
+//	printf("vrai memcpy%p\n", memcpy(dest, src, n));
+//	return 0;
 // }
