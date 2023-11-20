@@ -6,13 +6,13 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:20:48 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/17 11:15:13 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/20 10:33:22 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_itoa_size(int n)
+static int	ft_itoa_size(int n)
 {
 	int	temp;
 	int	i;

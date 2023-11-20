@@ -6,13 +6,13 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:37:47 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/17 11:21:03 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/20 10:34:50 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_memory(char **dest)
+static void	ft_free_memory(char **dest)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ void	ft_free_memory(char **dest)
 	free (dest);
 }
 
-int	ft_count_words(const char *s, char c)
+static int	ft_count_words(const char *s, char c)
 {
 	int	i;
 	int	compteur;
@@ -43,7 +43,7 @@ int	ft_count_words(const char *s, char c)
 	return (compteur);
 }
 
-char	*ft_write_word(char const *s, char	*dest, char c)
+static char	*ft_write_word(char const *s, char	*dest, char c)
 {
 	int		i;
 
@@ -57,7 +57,7 @@ char	*ft_write_word(char const *s, char	*dest, char c)
 	return (dest);
 }
 
-int	ft_write_split(char **dest, char const *s, char c)
+static int	ft_write_split(char **dest, char const *s, char c)
 {
 	int	i;
 	int	j;
