@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 09:53:05 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/20 11:33:30 by jlebard          ###   ########.fr       */
+/*   Created: 2023/11/20 12:14:11 by jlebard           #+#    #+#             */
+/*   Updated: 2023/11/20 12:14:34 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[i++])
 		dest[i] = f(i, s[i]);
-<<<<<<< HEAD
-=======
 	s[i] = '\0';
->>>>>>> origin/main
 	return (dest);
 }
