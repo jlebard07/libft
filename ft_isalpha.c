@@ -19,8 +19,10 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
-// void main()
+// int main()
 // {
 // 	char c = '0';
-// 	printf("test %d", ft_isalpha(c));
+// 	printf("%d\n", ft_isalpha(c));
+//	printf("vrai isalpha : %d\n", isalpha(c));
+//	return 0;
 // }

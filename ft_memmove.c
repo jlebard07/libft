@@ -40,5 +40,7 @@ void	*ft_memmove(void	*dest, const void	*src, size_t n)
 // 	char	*src[10];
 // 	char	*dest[9];
 // 	size_t	n = 6;
-// 	printf("%p", ft_memmove(dest, src, n));
+// 	printf("%p\n", ft_memmove(dest, src, n));
+//	printf("vrai memmove : %p\n", ft_memmove(dest, src, n));
+//	return 0;
 // }

@@ -5,7 +5,7 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 17:04:15 by marvin            #+#    #+#             */
+/*   Created: 2023/11/09 17:04:15 by jlebard            #+#    #+#             */
 /*   Updated: 2023/11/17 11:16:38 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -34,5 +34,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // 	unsigned char	*src[12];
 // 	unsigned char	*dest[10];
 // 	size_t	n = 8;
-// 	printf("%p", ft_memcpy(dest, src, n));
+// 	printf("%p\n", ft_memcpy(dest, src, n));
+//	printf("vrai memcpy%p\n", memcpy(dest, src, n));
+//	return 0;
 // }

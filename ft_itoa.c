@@ -60,8 +60,10 @@ char	*ft_itoa(int n)
 	return (dest);
 }
 
-// void main ()
+// int main ()
 // {
 // 	int n = -2147483648;
 // 	printf("%s\n", ft_itoa(n));
+//	printf("vrai itoa : %s\n", itoa(n));
+//	return 0;
 // }

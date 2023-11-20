@@ -41,9 +41,10 @@ int	ft_atoi(const char	*str)
 	return (j);
 }
 
-// void main()
+// int main()
 // {
 // 	char *str = "   \t\n\f -67263ghsgsw76382";
 // 	printf("%d\n", ft_atoi(str));
-// 	printf("atoi stdlib : %d",atoi(str));
+// 	printf("vrai atoi : %d\n",atoi(str));
+//	return 0;
 // }
