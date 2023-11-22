@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:14:11 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/20 12:14:34 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/20 12:19:49 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[i++])
 		dest[i] = f(i, s[i]);
-	s[i] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
