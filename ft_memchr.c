@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:12:10 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/20 12:12:11 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/22 15:53:30 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,25 @@
 
 void	*ft_memchr(const void	*s, int c, size_t n)
 {
-	unsigned char	*temp;
+	char	*temp;
 
-	temp = (unsigned char *)s;
-	while (*temp++ && n-- > 0)
-		if (*temp == c)
+	temp = (char *)s;
+	while (temp && n > 0)
+	{
+		if (*temp == (unsigned char)c)
 			return (temp);
+		temp++;
+		n--;
+	}
 	return (NULL);
 }
 
 // int main()
 // {
-// 	unsigned char* s = "iefhowe";
-// 	char c = 'w';
-// 	size_t n = 10;
+// 	char s[] = {0, 1, 2, 3, 4};
+// 	int c = 0;
+// 	size_t n = 1;
 // 	printf("%p", ft_memchr(s, c, n));
-//	printf("vrai memchr : %p\n", memchr(s, c, n));
-//	return 0;
+// 	printf("vrai memchr : %p\n", memchr(s, c, n));
+// 	return 0;
 // }

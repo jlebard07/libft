@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:13:16 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/20 12:13:16 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/22 16:40:52 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,25 @@
 
 char	*ft_strchr(const char	*s, int c)
 {
-	while (*s++)
-		if (*s == c)
-			return ((char *)s);
+	int	i;
+
+	i = 0;	
+	while (s[i])
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i++;
+	}
+	if (s[i] == c)
+		return ((char *)&s[i]);
 	return (NULL);
 }
 
 // int main()
 // {
-// 	char *s = "bdwuidgbw";
-// 	char c = 'u';
+// 	char *s = "tripouille";
+// 	char c = 't';
 // 	printf("%p\n", ft_strchr(s, c));
-//	printf("vrai strchr : %p\n", strchr(s, c));
-//	return 0;
+// 	printf("vrai strchr : %p\n", strchr(s, c + 256));
+// 	return 0;
 // }

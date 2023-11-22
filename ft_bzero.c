@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:10:43 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/20 12:10:49 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/22 14:38:52 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	ft_bzero(void *s, size_t n)
 
 	temp = (unsigned char *)s;
 	i = 0;
-	while (i > n)
+	while (i < n)
 	{
-		temp[i] = '\0';
+		*(temp + i) = '\0';
 		i++;
 	}
 }
