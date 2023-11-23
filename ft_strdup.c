@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:13:22 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/20 12:13:22 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/23 14:03:50 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,13 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	while (s[i])
-		i++;
-	dest = malloc(i * sizeof(char) + 1);
-	i = 0;
+	dest = malloc((ft_strlen(s) + 1) * sizeof(char));
 	while (s[i])
 	{
 		dest[i] = s[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
 

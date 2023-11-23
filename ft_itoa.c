@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:12:02 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/20 12:12:04 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/23 14:50:59 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ static int	ft_itoa_size(int n)
 	temp = n;
 	i = 1;
 	if (n == -2147483648)
+	{
 		i = 11;
+		return (i);
+	}
 	while (temp <= -10 || temp >= 10)
 	{
 		temp = temp / 10;
@@ -31,19 +34,18 @@ static int	ft_itoa_size(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+static char	*write_itoa(int n, int len, int i)
 {
 	char	*dest;
-	int		len;
-	int		i;
 
-	i = 0;
-	len = ft_itoa_size(n);
-	dest = (char *)malloc(len * sizeof(char) + 1);
-	if (!dest)
-		return (NULL);
+	dest = malloc((len + 1) * sizeof(char));
 	if (n == -2147483648)
-		return ("-2147483648");
+	{
+		dest[0] = '-';
+		dest[1] = '2';
+		n = 147483648;
+		i = 2;
+	}
 	if (n < 0)
 	{
 		dest[0] = '-';
@@ -60,10 +62,22 @@ char	*ft_itoa(int n)
 	return (dest);
 }
 
+char	*ft_itoa(int n)
+{
+	char	*dest;
+	int		len;
+
+	len = ft_itoa_size(n);
+	dest = write_itoa(n, len, 0);
+	if (!dest)
+		return (NULL);
+	return (dest);
+}
+
 // int main ()
 // {
 // 	int n = -2147483648;
 // 	printf("%s\n", ft_itoa(n));
-//	printf("vrai itoa : %s\n", itoa(n));
-//	return 0;
+// 	printf("vrai itoa : %s\n", itoa(n));
+// 	return 0;
 // }
