@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:11:01 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/23 14:00:46 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/27 09:25:02 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ void	*ft_calloc(size_t n, size_t size)
 {
 	void	*dest;
 
-	dest = malloc(n * size);
-	if (dest == NULL)
+	if (SIZE_MAX / n < size)
 		return (NULL);
-	ft_memset((unsigned char *)dest, 0, n * size);
+	dest = malloc(n * size);
+	if (!dest)
+		return (NULL);
+	ft_memset(dest, 0, n * size);
 	return (dest);
 }
 
@@ -27,7 +29,7 @@ void	*ft_calloc(size_t n, size_t size)
 // {
 // 	size_t n = 65535; 
 // 	size_t size = 65535;
-// 	printf("%p\n", ft_calloc(n, size));
-// 	printf("vrai calloc : %p\n", calloc(n, size));
+// 	printf("%p\n", ft_calloc(2, 2));
+// 	printf("vrai calloc : %p\n", calloc(2, 2));
 // 	return 0;
 // }

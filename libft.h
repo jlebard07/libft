@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:15:41 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/20 12:15:41 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/27 11:11:42 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stddef.h>
 # include <string.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 int		ft_atoi(const char	*str);
 void	ft_bzero(void *s, size_t n);

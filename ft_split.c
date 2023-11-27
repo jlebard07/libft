@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:13:09 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/22 13:05:00 by jlebard          ###   ########.fr       */
+/*   Updated: 2023/11/27 10:55:27 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,16 @@ static int	ft_count_words(const char *s, char c)
 
 	i = 0;
 	compteur = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
-			compteur ++;
-		i++;
+		while (s[i] == c)
+			i++;
+		while (s[i])
+		{
+			if ((s[i] == c && s[i + 1] != c) || (s[i + 1] == '\0'))
+				compteur ++;
+			i++;
+		}
 	}
 	return (compteur);
 }
@@ -90,23 +93,25 @@ char	**ft_split(char const *s, char c)
 	int		words;
 	char	**dest;
 
+	if (!s)
+		return (NULL);
 	words = ft_count_words(s, c);
 	dest = (char **)malloc(sizeof(char *) * (words + 1));
-	if (!dest)
-		return (NULL);
-	dest[words] = 0;
+	dest[words] = NULL;
 	if (ft_write_split(dest, s, c) == -1)
+	{
 		ft_free_memory(dest);
+		return (NULL);
+	}
 	return (dest);
 }
 
 // void main()
 // {
 // 	int i;
-// 	char *s = " bonjour comment ca va   ";
+// 	char *s = "   ";
 // 	char c = ' ';
 // 	char **dest;
-
 // 	i = 0;
 // 	dest = ft_split(s, c);
 // 	while (dest[i] != 0)
