@@ -6,7 +6,7 @@
 /*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:15:41 by jlebard           #+#    #+#             */
-/*   Updated: 2023/11/29 13:08:01 by jlebard          ###   ########.fr       */
+/*   Updated: 2024/06/12 13:07:36 by jlebard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,13 @@
 # include <string.h>
 # include <stdlib.h>
 # include <stdint.h>
+# include <fcntl.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 2
+# endif
+
+char	*get_next_line(int fd);
 int		ft_atoi(const char	*str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t n, size_t size);
