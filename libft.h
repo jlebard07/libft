@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlebard <jlebard@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:15:41 by jlebard           #+#    #+#             */
-/*   Updated: 2024/06/12 13:07:36 by jlebard          ###   ########.fr       */
+/*   Updated: 2024/06/14 18:33:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdlib.h>
 # include <stdint.h>
 # include <fcntl.h>
+# include <stdarg.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 2
@@ -60,5 +61,18 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+//printf
+
+int		ft_printf(const char *cible, ...);
+int		ft_if_decimal(int n);
+int		ft_if_hexa_down(unsigned int n);
+int		ft_if_hexa_up(unsigned int n);
+int		ft_if_ptr(void *ptr);
+int		ft_if_string(char *s);
+int		ft_if_unsigned(unsigned int n);
+
+
+
 
 #endif
